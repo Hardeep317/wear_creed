@@ -1,4 +1,4 @@
-import connectDB from "../../middleware/mongoose";
+import connectDB from "./middleware/mongoose";
 
 const handler = async (req, res) => {
   res.status(200).json({

@@ -1,5 +1,5 @@
-import connectDB from "../../middleware/mongoose";
-import User from "@/models/User";
+import connectDB from "./middleware/mongoose";
+import User from "@/pages/api/models/User";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 

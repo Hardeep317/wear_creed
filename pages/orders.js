@@ -1,4 +1,4 @@
-import Order from "@/models/Order";
+import Order from "@/pages/api/models/Order";
 import React, { useContext, useEffect, useState } from "react";
 import mongoose from "mongoose";
 import Link from "next/link";

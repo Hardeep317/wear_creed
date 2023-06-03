@@ -1,5 +1,5 @@
-import Order from "@/models/Order";
-import connectDB from "../../middleware/mongoose";
+import Order from "@/pages/api/models/Order";
+import connectDB from "./middleware/mongoose";
 const crypto = require("crypto");
 
 const handler = async (req, res) => {

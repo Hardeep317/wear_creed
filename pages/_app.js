@@ -1,6 +1,6 @@
 import AppContext from "@/AppContext";
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
+import Footer from "@/pages/Components/Footer";
+import Navbar from "@/pages/Components/Navbar";
 import "@/styles/globals.css";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";

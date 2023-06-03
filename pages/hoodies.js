@@ -1,4 +1,4 @@
-import Products from "@/models/Product";
+import Products from "@/pages/api/models/Product";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import mongoose from "mongoose";

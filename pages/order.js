@@ -1,4 +1,4 @@
-import Order from "@/models/Order";
+import Order from "@/pages/api/models/Order";
 import mongoose from "mongoose";
 import React from "react";
 
