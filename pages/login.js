@@ -32,7 +32,7 @@ const Login = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5500/login", {
+    fetch("https://wear-server.onrender.com/login", {
       method: "POST",
       headers: {
         "content-type": "application/json",
