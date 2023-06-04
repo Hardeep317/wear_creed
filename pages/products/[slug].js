@@ -1,17 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import AppContext from "@/AppContext";
-import Products from "@/pages/api/models/Product";
-import mongoose from "mongoose";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function Slug({ product, variants, slug }) {
+function Slug() {
   const { addToCart, user } = useContext(AppContext);
-  const [color, setColor] = useState(product.color);
-  const [size, setSize] = useState(product.size);
+  const [product, setProduct] = useState({})
+  const [variants, setVariants] = useState({})
+  const [color, setColor] = useState('');
+  const [size, setSize] = useState('');
   const router = useRouter();
 
+  const slug = router.query.slug
+
+
+ 
   const checkLog = () => {
     if (user.value === null) {
       setTimeout(() => {
@@ -30,9 +34,64 @@ function Slug({ product, variants, slug }) {
       });
     }
   };
+
+  const getvariant = () => {
+    const data = {
+      title: product.title
+    }
+    fetch('https://wear-server.onrender.com/getbytitle',{
+      method:"POST",
+      body: JSON.stringify(data),
+      headers:{
+        'content-type': 'application/json'
+      }
+    })
+    .then((res) => res.json())
+    .then((res2) => {
+      let colorSizeSlug = {};
+      
+      for(let item of res2) {
+        if (Object.keys(colorSizeSlug).includes(item.color)) {
+          colorSizeSlug[item.color][item.size] = { slug: item.slug };
+        } else {
+          colorSizeSlug[item.color] = {};
+          colorSizeSlug[item.color][item.size] = { slug: item.slug };
+        }
+        } 
+        
+        setVariants(colorSizeSlug)
+    })
+  }
+  const getProducts = () => {
+    const data = {
+      slug: slug
+    }
+
+    fetch('https://wear-server.onrender.com/getproduct',{
+      method:"POST",
+      body: JSON.stringify(data),
+      headers:{
+        'content-type': 'application/json'
+      }
+    })
+    .then((res) => res.json())
+    .then((res2) => {
+      setProduct(res2.product)
+      setColor(res2.product.color)
+      setSize(res2.product.size)
+    })
+    
+  }
+
   useEffect(() => {
     checkLog();
-  }, []);
+    if(Object.keys(product).length === 0){
+        getProducts();
+    }
+    if(Object.keys(variants).length === 0){
+        getvariant();
+    }
+  }, [product, variants]);
 
   return (
     <div>
@@ -49,7 +108,7 @@ function Slug({ product, variants, slug }) {
         theme="dark"
       />
       <section className="text-gray-600 body-font overflow-hidden">
-        <div className="container px-5 py-24 mx-auto">
+         {product && color && size && Object.keys(variants).length > 0 && <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
               alt="ecommerce"
@@ -363,36 +422,10 @@ function Slug({ product, variants, slug }) {
               </div>
             </div>
           </div>
-        </div>
+        </div>} 
       </section>
     </div>
   );
-}
-
-export async function getServerSideProps(context) {
-  if (!mongoose.connections[0].readyState) {
-    await mongoose.connect(process.env.MONGO_URI);
-  }
-  let product = await Products.findOne({ slug: context.query.slug });
-  let variants = await Products.find({ title: product.title });
-  let slug = context.query.slug;
-  let colorSizeSlug = {};
-
-  for (let item of variants) {
-    if (Object.keys(colorSizeSlug).includes(item.color)) {
-      colorSizeSlug[item.color][item.size] = { slug: item.slug };
-    } else {
-      colorSizeSlug[item.color] = {};
-      colorSizeSlug[item.color][item.size] = { slug: item.slug };
-    }
-  }
-  return {
-    props: {
-      product: JSON.parse(JSON.stringify(product)),
-      variants: JSON.parse(JSON.stringify(colorSizeSlug)),
-      slug: slug,
-    },
-  };
 }
 
 export default Slug;

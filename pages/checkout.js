@@ -39,7 +39,7 @@ const Checkout = () => {
 
   const getOrderId = () => {
     let settings = {
-      url: "/api/orderid",
+      url: "https://wear-server.onrender.com/getorderId",
       method: "POST",
       timeout: 0,
       headers: {
@@ -57,7 +57,7 @@ const Checkout = () => {
   };
 
   const getPin = () => {
-    fetch("/api/checkpin")
+    fetch("https://wear-server.onrender.com/checkpin")
       .then((res) => res.json())
       .then((res2) => setPin(res2));
   };
@@ -245,7 +245,7 @@ const Checkout = () => {
                 response.orderId = orderId;
 
                 let settings = {
-                  url: "/api/verify",
+                  url: "https://wear-server.onrender.com/verify",
                   method: "POST",
                   timeout: 0,
                   headers: {
@@ -263,7 +263,7 @@ const Checkout = () => {
                   amount: subt,
                 };
 
-                fetch("/api/saveorders", {
+                fetch("https://wear-server.onrender.com/saveorder", {
                   method: "POST",
                   body: JSON.stringify(sendData),
                   headers: {

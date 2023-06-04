@@ -1,6 +1,4 @@
-import Order from "@/pages/api/models/Order";
 import React, { useContext, useEffect, useState } from "react";
-import mongoose from "mongoose";
 import Link from "next/link";
 import AppContext from "@/AppContext";
 import { ToastContainer, toast } from "react-toastify";
@@ -17,7 +15,7 @@ function orders() {
   };
 
   const getOrders = () => {
-    fetch("/api/getorders", {
+    fetch("https://wear-server.onrender.com/getorders", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -53,6 +51,18 @@ function orders() {
   }, [userdetails, user.value]);
   return (
     <div className="flex flex-col w-4/5 m-auto">
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
           <div className="overflow-hidden">
@@ -102,23 +112,4 @@ function orders() {
   );
 }
 
-// export async function getServerSideProps(context) {
-//     if (!mongoose.connections[0].readyState) {
-//       await mongoose.connect(process.env.MONGO_URI);
-//     }
-//     let user;
-//     if (typeof window !== 'undefined') {
-//        user = JSON.parse(localStorage.getItem('user'));
-//     }
-//     let product;
-//     if(user){
-//      product = await Order.find({email: user.email});
-//     }
-
-//     return {
-//       props: {
-//         products: JSON.parse(JSON.stringify(product))
-//       },
-//     };
-//   }
 export default orders;

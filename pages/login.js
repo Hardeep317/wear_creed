@@ -32,7 +32,7 @@ const Login = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    fetch("/api/login", {
+    fetch("http://localhost:5500/login", {
       method: "POST",
       headers: {
         "content-type": "application/json",

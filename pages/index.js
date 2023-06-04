@@ -23,7 +23,7 @@ export default function Home() {
       <div
         className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed">
         <div className="flex h-full items-center justify-center">
-          <div className="px-6 text-center text-white md:px-12">
+          <div className="px-6 text-center text-gray-300 md:px-12">
             <h2 className="mb-12 text-5xl font-bold leading-tight tracking-tight">
               Are you ready <br /><span>for an adventure</span>
             </h2>
@@ -48,23 +48,23 @@ export default function Home() {
 
 <div className="container my-24 mx-auto md:px-6">
   <section className="mb-32 text-center">
-    <h2 className="mb-12 text-3xl text-white font-bold">
+    <h2 className="mb-12 text-3xl text-gray-400 font-bold">
       There are good reasons to
       <u className="text-primary dark:text-primary-400">be proud</u>
     </h2>
     <div className="grid md:grid-cols-3 lg:gap-x-12">
       <div className="mb-12 md:mb-0">
-        <div className="mb-6 inline-block rounded-md bg-primary-100 text-white p-4 text-primary">
+        <div className="mb-6 inline-block rounded-md bg-primary-100 text-gray-400 p-4 text-primary">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
             stroke="currentColor" className="h-6 w-6">
             <path strokeLinecap="round" strokeLinejoin="round"
               d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
           </svg>
         </div>
-        <h3 className="mb-4 text-2xl font-bold text-primary  dark:text-primary-400">
+        <h3 className="mb-4 text-2xl font-bold text-primary text-gray-400  dark:text-primary-400">
           1000
         </h3>
-        <h5 className="text-lg font-medium text-neutral-500 dark:text-neutral-300">
+        <h5 className="text-lg font-medium text-gray-400 ">
           Happy customers
         </h5>
       </div>
@@ -72,15 +72,15 @@ export default function Home() {
       <div className="mb-12 md:mb-0">
         <div className="mb-6 inline-block rounded-md bg-primary-100 p-4 text-primary">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-            stroke="currentColor" className="h-6 w-6  text-white">
+            stroke="currentColor" className="h-6 w-6  text-gray-400">
             <path strokeLinecap="round" strokeLinejoin="round"
               d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
           </svg>
         </div>
-        <h3 className="mb-4 text-2xl font-bold text-primary dark:text-primary-400">
+        <h3 className="mb-4 text-2xl font-bold text-primary text-gray-400 dark:text-primary-400">
           70%
         </h3>
-        <h5 className="text-lg font-medium text-neutral-500 dark:text-neutral-300">
+        <h5 className="text-lg font-medium text-gray-400">
           Growth
         </h5>
       </div>
@@ -88,16 +88,16 @@ export default function Home() {
       <div className="mb-12 md:mb-0">
         <div className="mb-6 inline-block rounded-md bg-primary-100 p-4 text-primary">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-            stroke="currentColor" className="h-6 w-6  text-white">
+            stroke="currentColor" className="h-6 w-6  text-gray-400">
             <path strokeLinecap="round" strokeLinejoin="round"
               d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
         </div>
-        <h3 className="mb-4 text-2xl font-bold text-primary dark:text-primary-400">
+        <h3 className="mb-4 text-2xl font-bold text-primary text-gray-400 dark:text-primary-400">
           49
         </h3>
-        <h5 className="text-lg font-medium text-neutral-500 dark:text-neutral-300">
+        <h5 className="text-lg font-medium text-gray-400">
           Projects
         </h5>
       </div>
@@ -108,7 +108,7 @@ export default function Home() {
 
       <div className="container my-24 mx-auto md:px-6">
         <section className="mb-32 text-center">
-          <h2 className="mb-12 text-3xl  text-white font-bold">
+          <h2 className="mb-12 text-3xl  text-gray-400 font-bold">
             Meet the <u className="text-primary dark:text-primary-400">team</u>
           </h2>
 
@@ -322,11 +322,11 @@ export default function Home() {
   <section className="mb-32">
     <div className="flex justify-center">
       <div className="max-w-[700px] text-center">
-        <p className="mb-6 font-bold uppercase text-primary dark:text-primary-400">
+        <p className="mb-6 font-bold text-gray-400 uppercase text-primary dark:text-primary-400">
           Features
         </p>
-        <h2 className="mb-6 text-3xl font-bold">Why is it so great?</h2>
-        <p className="mb-16 text-neutral-500 dark:text-neutral-300">
+        <h2 className="mb-6 text-3xl text-gray-500 font-bold">Why is it so great?</h2>
+        <p className="mb-16 text-gray-400">
           Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque
           iaculis malesuada. Aenean gravida magna orci, non efficitur est
           porta id. Donec magna diam.
@@ -339,14 +339,14 @@ export default function Home() {
         <div className="flex">
           <div className="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-              stroke="currentColor" className="mr-3 h-5 w-5 text-success">
+              stroke="currentColor" className="mr-3 h-5 w-5 text-gray-400 text-success">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div className="ml-2 grow">
-            <p className="mb-1 font-bold">Support 24/7</p>
-            <p className="text-neutral-500 dark:text-neutral-300">
+            <p className="mb-1 font-bold text-gray-500">Support 24/7</p>
+            <p className="text-gray-400">
               Pellentesque mollis, metus nec fringilla aliquam
             </p>
           </div>
@@ -357,14 +357,14 @@ export default function Home() {
         <div className="flex">
           <div className="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-              stroke="currentColor" className="mr-3 h-5 w-5 text-success">
+              stroke="currentColor" className="mr-3 text-gray-400 h-5 w-5 text-success">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div className="ml-2 grow">
-            <p className="mb-1 font-bold">Tracking</p>
-            <p className="text-neutral-500 dark:text-neutral-300">
+            <p className="mb-1 font-bold text-gray-500">Tracking</p>
+            <p className="text-gray-400">
               Magna lacus iaculis elit, quis pharetra varius.
             </p>
           </div>
@@ -375,14 +375,14 @@ export default function Home() {
         <div className="flex">
           <div className="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-              stroke="currentColor" className="mr-3 h-5 w-5 text-success">
+              stroke="currentColor" className="mr-3 text-gray-400 h-5 w-5 text-success">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div className="ml-2 grow">
-            <p className="mb-1 font-bold">Reporting</p>
-            <p className="text-neutral-500 dark:text-neutral-300">
+            <p className="mb-1 font-bold text-gray-500" >Reporting</p>
+            <p className="text-gray-400">
               Pellentesque varius ex vel consequat quis.
             </p>
           </div>
@@ -393,14 +393,14 @@ export default function Home() {
         <div className="flex">
           <div className="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-              stroke="currentColor" className="mr-3 h-5 w-5 text-success">
+              stroke="currentColor" className="mr-3 h-5 text-gray-400 w-5 text-success">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div className="ml-2 grow">
-            <p className="mb-1 font-bold">Analytics</p>
-            <p className="text-neutral-500 dark:text-neutral-300">
+            <p className="mb-1 font-bold text-gray-500">Analytics</p>
+            <p className="text-gray-400">
               Vestibulum gravida iaculis nisl, vel lobortis eros.
             </p>
           </div>
@@ -411,14 +411,14 @@ export default function Home() {
         <div className="flex">
           <div className="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-              stroke="currentColor" className="mr-3 h-5 w-5 text-success">
+              stroke="currentColor" className="mr-3 text-gray-400 h-5 w-5 text-success">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div className="ml-2 grow">
-            <p className="mb-1 font-bold">Huge community</p>
-            <p className="text-neutral-500 dark:text-neutral-300">
+            <p className="mb-1 font-bold text-gray-500">Huge community</p>
+            <p className="text-gray-400">
               Praesent vulputate lacus bibendum augue .
             </p>
           </div>
@@ -429,14 +429,14 @@ export default function Home() {
         <div className="flex">
           <div className="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-              stroke="currentColor" className="mr-3 h-5 w-5 text-success">
+              stroke="currentColor" className="mr-3 text-gray-400 h-5 w-5 text-success">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div className="ml-2 grow">
-            <p className="mb-1 font-bold">Easy to use</p>
-            <p className="text-neutral-500 dark:text-neutral-300">
+            <p className="mb-1 font-bold text-gray-500">Easy to use</p>
+            <p className="text-gray-400">
               Sed mauris ex, imperdiet sit amet nisl ac, ultrices.
             </p>
           </div>
@@ -447,14 +447,14 @@ export default function Home() {
         <div className="flex">
           <div className="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-              stroke="currentColor" className="mr-3 h-5 w-5 text-success">
+              stroke="currentColor" className="mr-3 h-5 text-gray-400 w-5 text-success">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div className="ml-2 grow">
-            <p className="mb-1 font-bold">Frequent updates</p>
-            <p className="text-neutral-500 dark:text-neutral-300">
+            <p className="mb-1 font-bold text-gray-500">Frequent updates</p>
+            <p className="text-gray-400">
               Aenean lectus ex, placerat id tellus in eros.
             </p>
           </div>
@@ -465,14 +465,14 @@ export default function Home() {
         <div className="flex">
           <div className="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-              stroke="currentColor" className="mr-3 h-5 w-5 text-success">
+              stroke="currentColor" className="mr-3 h-5 text-gray-400 w-5 text-success">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div className="ml-2 grow">
-            <p className="mb-1 font-bold">Responsive</p>
-            <p className="text-neutral-500 dark:text-neutral-300">
+            <p className="mb-1 font-bold text-gray-500">Responsive</p>
+            <p className="text-gray-400">
               Donec consequat orci quis volutpat imperdiet.
             </p>
           </div>
@@ -485,7 +485,7 @@ export default function Home() {
 
 <div className="container my-24 mx-auto border-t-2 border-white pt-6 md:px-6">
   <section className="mb-32 text-center">
-    <h2 className="mb-12 text-3xl  text-white font-bold">Testimonials</h2>
+    <h2 className="mb-12 text-3xl  text-gray-400 font-bold">Testimonials</h2>
 
     <div className="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
       <div className="mb-12 md:mb-0">
@@ -493,11 +493,11 @@ export default function Home() {
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
             className="w-32 rounded-full shadow-lg dark:shadow-black/20" />
         </div>
-        <h5 className="mb-2 text-lg font-bold text-white">Maria Smantha</h5>
-        <h6 className="mb-4 font-medium text-primary text-white dark:text-primary-400">
+        <h5 className="mb-2 text-lg font-bold text-gray-400">Maria Smantha</h5>
+        <h6 className="mb-4 font-medium text-primary text-gray-400 dark:text-primary-400">
           Web Developer
         </h6>
-        <p className="mb-4 text-white">
+        <p className="mb-4 text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
           id officiis hic tenetur quae quaerat ad velit ab hic.
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" className="inline-block  w-6">
@@ -543,11 +543,11 @@ export default function Home() {
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).jpg"
             className="w-32 rounded-full shadow-lg dark:shadow-black/20" />
         </div>
-        <h5 className="mb-2 text-lg text-white font-bold">Lisa Cudrow</h5>
-        <h6 className="mb-4 text-white font-medium text-primary dark:text-primary-400">
+        <h5 className="mb-2 text-lg text-gray-400 font-bold">Lisa Cudrow</h5>
+        <h6 className="mb-4 text-gray-400 font-medium text-primary dark:text-primary-400">
           Graphic Designer
         </h6>
-        <p className="mb-4 text-white">
+        <p className="mb-4 text-gray-400">
           Ut enim ad minima veniam, quis nostrum exercitationem ullam
           corporis suscipit laboriosam, nisi ut aliquid commodi.
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" className="inline-block w-6 ">
@@ -593,11 +593,11 @@ export default function Home() {
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
             className="w-32 rounded-full shadow-lg dark:shadow-black/20" />
         </div>
-        <h5 className="mb-2 text-lg text-white font-bold">John Smith</h5>
-        <h6 className="mb-4 text-white font-medium text-primary dark:text-primary-400">
+        <h5 className="mb-2 text-lg text-gray-400 font-bold">John Smith</h5>
+        <h6 className="mb-4 text-gray-400 font-medium text-primary dark:text-primary-400">
           Marketing Specialist
         </h6>
-        <p className="mb-4 text-white">
+        <p className="mb-4 text-gray-400">
           At vero eos et accusamus et iusto odio dignissimos ducimus qui
           blanditiis praesentium voluptatum deleniti atque corrupti.
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" className="inline-block w-6">
