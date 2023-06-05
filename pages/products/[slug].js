@@ -10,6 +10,7 @@ function Slug() {
   const [variants, setVariants] = useState({});
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
+  const [slugs, setSlugs] = useState('')
   const router = useRouter();
 
   const slug = router.query.slug;
@@ -60,6 +61,7 @@ function Slug() {
         setVariants(colorSizeSlug);
       });
   };
+
   const getProducts = () => {
     const data = {
       slug: slug,
@@ -80,15 +82,16 @@ function Slug() {
       });
   };
 
+
   useEffect(() => {
     checkLog();
-    if (Object.keys(product).length === 0) {
+    if(product.length === 0 || slug != slugs)
       getProducts();
-    }
+      setSlugs(slug)
     if (Object.keys(variants).length === 0) {
       getvariant();
     }
-  }, [product, variants]);
+  }, [product, slug, variants]);
 
   return (
     <div>
