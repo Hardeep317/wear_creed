@@ -8,7 +8,7 @@ const Jeans = () => {
   const [products, setProducts] = useState({});
 
   const getProducts = () => {
-    fetch("https://wear-server.onrender.com/getjeans")
+    fetch("https://average-pink-fly.cyclic.app/getjeans")
       .then((res) => res.json())
       .then((hood) => setProducts(hood.jeans));
   };
