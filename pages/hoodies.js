@@ -6,7 +6,7 @@ const Hoodies = ( ) => {
   const [products, setProducts] = useState({});
 
   const getProducts = () => { 
-     fetch('https://average-pink-fly.cyclic.app/gethoodies')
+     fetch('https://wear-server.onrender.com/gethoodies')
      .then((res) => res.json())
      .then((hood) => setProducts(hood.hoodies))
 }

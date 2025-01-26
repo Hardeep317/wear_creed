@@ -34,7 +34,7 @@ const Signup = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    fetch("https://average-pink-fly.cyclic.app/signup", {
+    fetch("https://wear-server.onrender.com/signup", {
       method: "POST",
       headers: {
         "content-type": "application/json",

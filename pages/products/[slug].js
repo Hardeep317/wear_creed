@@ -38,7 +38,7 @@ function Slug() {
     const data = {
       title: product.title,
     };
-    fetch("https://average-pink-fly.cyclic.app/getbytitle", {
+    fetch("https://wear-server.onrender.com/getbytitle", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -67,7 +67,7 @@ function Slug() {
       slug: slug,
     };
 
-    fetch("https://average-pink-fly.cyclic.app/getproduct", {
+    fetch("https://wear-server.onrender.com/getproduct", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

@@ -15,7 +15,7 @@ function orders() {
   };
 
   const getOrders = () => {
-    fetch("https://average-pink-fly.cyclic.app/getorders", {
+    fetch("https://wear-server.onrender.com/getorders", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
